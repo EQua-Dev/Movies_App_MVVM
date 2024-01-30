@@ -11,16 +11,24 @@ import SwiftUI
 struct MovieListScreen: View {
     
     @ObservedObject private var movieListVM: MovieListViewModel
+    @State private var movieName: String = ""
     
     init() {
         self.movieListVM = MovieListViewModel()
-        self.movieListVM.searchByName("batman")
     }
     var body: some View {
         VStack{
+            
+            TextField("Search", text: $movieName, onEditingChanged: { _ in}, onCommit: {
+                //perform the search
+                self.movieListVM.searchByName(self.movieName)
+
+            }).textFieldStyle(RoundedBorderTextFieldStyle())
+            Spacer()
+            
             MovieListView(movies: self.movieListVM.movies)
                 .navigationBarTitle("Movies")
-        }.embedNavigationView()
+        }.padding().embedNavigationView()
     }
 }
 
