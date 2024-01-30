@@ -11,6 +11,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Hello, World!")
+        
+            .onAppear{
+                HTTPClient().getMoviesBy(search: "batman"){ result in
+                    switch result{
+                        case .success(let movies):
+                            print(movies)
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                            
+                    }
+                }
+            }
     }
 }
 
