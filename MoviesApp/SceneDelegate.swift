@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  MoviesApp
 //
-//  Created by Mohammad Azam on 7/29/20.
-//  Copyright © 2020 Mohammad Azam. All rights reserved.
+//  Created by Richard Uzor on 1/27/24.
+//  Copyright © 2024 Richard Uzor. All rights reserved.
 //
 
 import UIKit

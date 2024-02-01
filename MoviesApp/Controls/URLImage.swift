@@ -2,8 +2,8 @@
 //  URLImage.swift
 //  URLImageDemo
 //
-//  Created by Mohammad Azam on 6/17/20.
-//  Copyright © 2020 Mohammad Azam. All rights reserved.
+//  Created by Richard Uzor on 1/27/24.
+//  Copyright © 2024 Richard Uzor. All rights reserved.
 //
 
 import SwiftUI
@@ -24,7 +24,7 @@ struct URLImage: View {
     var body: some View {
       
         if let data = self.imageLoader.downloadedData {
-            return Image(uiImage: UIImage(data: data)!).resizable()
+            return Image(uiImage: (UIImage(data: data) ?? UIImage(named: "placeholder"))!).resizable()
         } else {
             return Image("placeholder").resizable()
         }

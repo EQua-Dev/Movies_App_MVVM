@@ -3,7 +3,7 @@
 //  MoviesApp
 //
 //  Created by Richard Uzor on 01/02/2024.
-//  Copyright © 2024 Mohammad Azam. All rights reserved.
+//  Copyright © 2024 Richard Uzor. All rights reserved.
 //
 
 import Foundation
