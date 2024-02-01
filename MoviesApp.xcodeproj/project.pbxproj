@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454B1B972B6B6AF400185050 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B1B962B6B6AF400185050 /* MovieDetailViewModel.swift */; };
 		4585A34C2B698015001E5900 /* FailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4585A34B2B698015001E5900 /* FailedView.swift */; };
 		4585A34E2B6984F6001E5900 /* ViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4585A34D2B6984F5001E5900 /* ViewModelBase.swift */; };
 		4585A3502B698680001E5900 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4585A34F2B698680001E5900 /* LoadingView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		454B1B962B6B6AF400185050 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		4585A34B2B698015001E5900 /* FailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedView.swift; sourceTree = "<group>"; };
 		4585A34D2B6984F5001E5900 /* ViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBase.swift; sourceTree = "<group>"; };
 		4585A34F2B698680001E5900 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				45E267C62B691D470093F779 /* MovieListViewModel.swift */,
 				4585A34D2B6984F5001E5900 /* ViewModelBase.swift */,
+				454B1B962B6B6AF400185050 /* MovieDetailViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				4585A34C2B698015001E5900 /* FailedView.swift in Sources */,
 				45E267CB2B6931940093F779 /* MovieListView.swift in Sources */,
 				458C84962B6763D300F18592 /* Movie.swift in Sources */,
+				454B1B972B6B6AF400185050 /* MovieDetailViewModel.swift in Sources */,
 				45D2A9D22B697A9000B81384 /* String+Extension.swift in Sources */,
 				8D7ACB4524D1E4B100644453 /* ContentView.swift in Sources */,
 				4585A3502B698680001E5900 /* LoadingView.swift in Sources */,
