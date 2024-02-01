@@ -16,6 +16,31 @@ enum NetworkError: Error{
 
 class HTTPClient {
     
+    func getMovieDetailBy(imdb: String, completion: @escaping (Result<MovieDetail, NetworkError>) -> Void){
+        
+        //set the request url
+        guard let url = URL.forMoviesByImdbId(imdb)
+        else{
+            return completion(.failure(.badURL))
+        }
+        
+        URLSession.shared.dataTask(with: url){ data, response, error in
+            guard let data = data, error == nil else{
+                return completion(.failure(.noData))
+            }
+            
+            guard let movieDetailResponse = try? JSONDecoder().decode(MovieDetail.self, from: data)
+            else{
+                return completion(.failure(.decodingError))
+            }
+            
+            completion(.success(movieDetailResponse))
+            
+        }.resume()
+        
+        
+    }
+    
     func getMoviesBy(search: String, completion: @escaping (Result<[Movie]?, NetworkError>) -> Void){
         
         //set the request url
@@ -26,6 +51,8 @@ class HTTPClient {
         
         //make the network request
         URLSession.shared.dataTask(with: url){ data, response, error in
+            
+            //unwrap the data
             guard let data = data, error == nil else{
                 return completion(.failure(.noData))
             }
